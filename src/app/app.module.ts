@@ -12,7 +12,7 @@ import { ServersComponent } from './servers/servers.component';
     ServersComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
