@@ -6,6 +6,11 @@
 
 <p> {{ serverCreationStatus }}</p>
 
+<!-- ngif directive -->
+<p *ngIf="serverCreated; else noServer"> {{ serverCreationStatus}} </p>
+<ng-template #noServer>
+  <p>No server was created</p>
+</ng-template>
 
 
 
@@ -14,8 +19,8 @@
 <p> {{ serverName }}</p>
 
 
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers" ></app-server>
+<!-- <app-server></app-server> -->
 
 <!-- <p> string interpolation {{ allowNewServerm }}</p>
 
